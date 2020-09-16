@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Heart Attack's probaility</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+            <input type="number" name="age" id="age" placeholder="AGE"><br>
+            
+            <input id="sex" list="listsex" name="sex" placeholder='SEX'>
+            <datalist id="listsex">
+   		<option value="Female">Female</option>
+    		<option value="Male">Male</option>
+	    </datalist><br>
+            
+            <input type="number" name="cp" id="cp" placeholder="CP"><br>
+            
+            <input type="number" name="trestbps" id="trestbps" placeholder="TRESTBPS"><br>
+            
+            <input type="number" name="chol" id="chol" placeholder="CHOL"><br>
+            
+            <input id="fbs" list="listfbs" name="fbs" placeholder='FBS'>
+            <datalist id="listfbs">
+              <option value=0>
+              <option value=1>
+            </datalist><br>
+            
+	    <input id="restecg" list="listrestecg" name="restecg" placeholder='RESTECG'>
+            <datalist id="listrestecg">
+   		<option value=0>
+    		<option value=1>
+	    </datalist><br>
+            
+            <input type="number" name="thalach" id="thalach" placeholder="THALACH"><br>
+            
+            <input type="number" name="exang" id="exang" placeholder="EXANG"><br>
+          
+            <input type="number" name="oldpeak" id="oldpeak" placeholder="OLDPEAK"><br>
+            
+            <input type="number" name="slope" id="slope" placeholder="SLOPE"><br>
+            
+            <input type="number" name="ca" id="ca" placeholder="CA"><br>
+            
+            <input type="number" name="thal" id="thal" placeholder="THAL"><br>
+            <input type="submit" value="Predict" class="btn btn-primary btn-block btn-large">
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+
+</body>
+</html>

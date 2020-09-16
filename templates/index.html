@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+    </head>
+    <body bgcolor="#18c9b2">
+        <div style='text-align:center; font-size: 50px;'>Enter the details below</div>
+        <div>
+            <form action="/predict" method="POST">
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" placeholder="AGE"><br>
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex">
+            <option value=1>Male</option>
+            <option value=0>Female</option>
+            </select><br>
+            <label for="cp">Cp:</label>
+            <input type="number" name="cp" id="cp" placeholder="CP"><br>
+            <label for="trestbps">Trestbps:</label>
+            <input type="number" name="trestbps" id="trestbps" placeholder="TRESTBPS"><br>
+            <label for="chol">Chol:</label>
+            <input type="number" name="chol" id="chol" placeholder="CHOL"><br>
+            <label for="fbs">Fbs:</label>
+            <select id="fbs" name="fbs">
+                <option type='number' value=0>0</option>
+                <option type='number' value=1>1</option>
+            </select><br>
+            <label for="restecg">Restecg:</label>
+            <select id="restecg" name="restecg">
+                <option type='number' value=0>0</option>
+                <option type='number' value=1>1</option>
+            </select><br>
+            <label for="thalach">Thalach:</label>
+            <input type="number" name="thalach" id="thalach" placeholder="THALACH"><br>
+            <label for="exang">Exang:</label>
+            <input type="number" name="exang" id="exang" placeholder="EXANG"><br>
+            <label for="oldpeak">Oldpeak:</label>
+            <input type="number" name="oldpeak" id="oldpeak" placeholder="OLDPEAK"><br>
+            <label for="slope">Slope:</label>
+            <input type="number" name="slope" id="slope" placeholder="SLOPE"><br>
+            <label for="ca">Ca:</label>
+            <input type="number" name="ca" id="ca" placeholder="CA"><br>
+            <label for="thal">Thal:</label>
+            <input type="number" name="thal" id="thal" placeholder="THAL"><br>
+            <input type="submit" value="Predict">
+            </form>
+        </div> 
+    </body>
+</html>
