@@ -29,7 +29,7 @@ def index():
             ca = float(request.form['ca'])
             thal = float(request.form['thal'])
 
-            filename = 'modelprediction.pickle'
+            filename = 'modelprediction.sav'
             # loading the model file from the storage
             loaded_model = pickle.load(open(filename, 'rb'))
             # predictions using the loaded model file
